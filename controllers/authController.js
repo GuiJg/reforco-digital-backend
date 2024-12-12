@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     console.log("Dados recebidos:", { name, email, password });
-
+ 
     let user = await User.findOne({ email });
     if (user) {
       console.log("Usuário já existe:", user);
